@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Dual list selector demo</string>
+
+    <string name="sample_type_default_title">Default</string>
+    <string name="sample_type_cool_title">Cool</string>
+    <string name="sample_type_dark_title">Dark</string>
+
+</resources>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="DualListSelectorView">
+        <attr name="dls_list_background_color" format="color" />
+
+        <attr name="dls_show_title" format="boolean" />
+        <attr name="dls_title_size" format="dimension" />
+        <attr name="dls_title_color" format="color" />
+        <attr name="dls_selectable_list_title_text" format="string" />
+        <attr name="dls_selected_list_title_text" format="string" />
+
+        <attr name="dls_show_empty_list_text" format="boolean" />
+        <attr name="dls_selectable_empty_list_text" format="string" />
+        <attr name="dls_selected_empty_list_text" format="string" />
+
+        <attr name="dls_selected_list_item_insertion_order" format="enum">
+            <enum name="beginning" value="0" />
+            <enum name="end" value="1" />
+            <enum name="original" value="2" />
+        </attr>
+        <attr name="dls_scroll_to_inserted_list_item" format="boolean" />
+        <attr name="dls_show_list_item_animation" format="boolean" />
+
+        <attr name="dls_show_list_item_divider" format="boolean" />
+        <attr name="dls_list_item_divider_height" format="dimension" />
+        <attr name="dls_list_item_divider_color" format="color" />
+
+        <attr name="dls_list_item_image_size" format="dimension" />
+
+        <attr name="dls_list_item_primary_text_size" format="dimension" />
+        <attr name="dls_list_item_primary_text_color" format="color" />
+
+        <attr name="dls_list_item_secondary_text_size" format="dimension" />
+        <attr name="dls_list_item_secondary_text_color" format="color" />
+
+        <attr name="dls_divider_background_color" format="color" />
+        <attr name="dls_divider_handlebar_color" format="color" />
+    </declare-styleable>
+</resources>

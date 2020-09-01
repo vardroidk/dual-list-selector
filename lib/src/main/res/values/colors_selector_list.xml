@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="default_list_background_color">#FFFFFF</color>
+    <color name="default_title_color">#B3000000</color>
+    <color name="default_empty_list_text_background_color">#EEEEEE</color>
+    <color name="default_empty_list_text_color">#666666</color>
+    <color name="default_list_item_divider_color">#D1D1D1</color>
+    <color name="default_list_item_primary_text_color">#DE000000</color>
+    <color name="default_list_item_secondary_text_color">#66000000</color>
+
+</resources>

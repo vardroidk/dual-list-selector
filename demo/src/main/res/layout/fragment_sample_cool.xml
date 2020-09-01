@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.vardroid.duallistselector.duallist.DualListSelectorView
+        android:id="@+id/dual_list_selector_view"
+        android:layout_width="@dimen/zero"
+        android:layout_height="@dimen/zero"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:dls_list_background_color="#EDEFCF"
+        app:dls_show_title="true"
+        app:dls_title_size="18sp"
+        app:dls_title_color="#595775"
+        app:dls_selectable_list_title_text="Best movies"
+        app:dls_selected_list_title_text="My bucket list"
+        app:dls_show_empty_list_text="true"
+        app:dls_selectable_empty_list_text="No more movies to select..."
+        app:dls_selected_empty_list_text="No movie selected yet..."
+        app:dls_show_list_item_animation="true"
+        app:dls_scroll_to_inserted_list_item="false"
+        app:dls_selected_list_item_insertion_order="end"
+        app:dls_show_list_item_divider="true"
+        app:dls_list_item_divider_height="1dp"
+        app:dls_list_item_divider_color="#595775"
+        app:dls_list_item_image_size="60dp"
+        app:dls_list_item_primary_text_size="16sp"
+        app:dls_list_item_primary_text_color="#728CA3"
+        app:dls_list_item_secondary_text_size="14sp"
+        app:dls_list_item_secondary_text_color="#8C7462"
+        app:dls_divider_background_color="#595775"
+        app:dls_divider_handlebar_color="#EDEFCF" />
+</androidx.constraintlayout.widget.ConstraintLayout>

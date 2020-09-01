@@ -1,0 +1,98 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    repositories {
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:4.0.1'
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+ext {
+    projectName = 'duallistselector'
+    versionName = property('dualListSelecter.demo.android.versionName').toString()
+}
+
+ext { // Version constants
+    versions = [
+            'androidXAppcompat': '1.3.0-alpha02',
+            'androidXConstraintLayout': '2.0.1',
+            'androidXRecyclerView': '1.1.0',
+            'androidXTestRunner': '1.3.0',
+            'glide': '4.11.0',
+            'googleGuava': '29.0-android',
+            'googleGson': '2.8.6',
+            'googleMaterial': '1.2.0',
+            'junit': '4.12',
+            'lombok': '1.18.12',
+            'recyclerviewAnimators': '3.0.0',
+    ]
+}
+
+allprojects {
+    versionName = rootProject.versionName
+    repositories {
+        google()
+        jcenter()
+    }
+}
+
+subprojects {
+
+    afterEvaluate { Project project ->
+
+        def pluginContainer = project.getPlugins()
+
+        // Inject common Android configuration into sub projects.
+        if (pluginContainer.hasPlugin("com.android.application") || pluginContainer.hasPlugin("com.android.library")) {
+
+            android {
+                compileSdkVersion 29
+                buildToolsVersion "29.0.2"
+
+                defaultConfig {
+                    minSdkVersion 21
+                    targetSdkVersion 29
+                    versionCode getProperty('dualListSelecter.demo.android.versionCode').toInteger()
+                    versionName project.version
+                }
+
+                compileOptions {
+                    sourceCompatibility JavaVersion.VERSION_1_8
+                    targetCompatibility JavaVersion.VERSION_1_8
+                }
+
+                lintOptions {
+                    abortOnError false
+                    checkReleaseBuilds true
+                    enable 'CommitTransaction', 'Deprecated', 'DefaultLocale', 'DuplicateDefinition', 'DuplicateUsesFeature', 'EasterEgg','RtlHardcoded','RtlCompat', 'RtlEnabled', 'AllowBackup', 'AppCompatMethod', 'AlwaysShowAction', 'AppCompatResource', 'Assert', 'BackButton', 'ButtonCase', 'ButtonOrder', 'ButtonStyle', 'CheckResult', 'GradlePluginVersion', 'GradleIdeError', 'GradleDeprecated', 'GradleDynamicVersion', 'HardcodedText', 'HandlerLeak', 'IconDuplicates', 'IconNoDpi', 'IncludeLayoutParam', 'InconsistentArrays', 'InconsistentLayout', 'InefficientWeight', 'InflateParams', 'InlinedApi', 'InnerclassSeparator', 'InvalidPackage', 'InvalidResourceFolder', 'ManifestOrder', 'MissingId', 'MissingPermission', 'MissingSuperCall', 'NewApi', 'NewerVersionAvailable', 'NotInterpolated', 'OldTargetApi', 'ObsoleteLayoutParam', 'Orientation', 'Override', 'PrivateResource', 'ProtectedPermissions', 'Recycle', 'RecyclerView', 'SecureRandom', 'SetJavaScriptEnabled', 'ShowToast', 'SimpleDateFormat', 'StringFormatInvalid', 'StringFormatMatches', 'StringShouldBeInt', 'Suspicious0dp', 'SuspiciousImport', 'SwitchIntDef', 'TrulyRandom', 'Typos', 'UnknownIdInLayout', 'UnusedAttribute', 'UnusedIds', 'UnusedNamespace', 'UnusedQuantity', 'UnusedResources', 'UseCheckPermission', 'UseValueOf', 'UselessParent', 'UsingHttp', 'ViewConstructor', 'ViewHolder', 'ViewTag', 'WrongThread'
+                }
+
+                packagingOptions {
+                    exclude 'META-INF/BCKEY.SF'
+                    exclude 'META-INF/BCKEY.DSA'
+                    exclude 'META-INF/DEPENDENCIES'
+                    exclude 'META-INF/NOTICE'
+                    exclude 'META-INF/LICENSE'
+                    exclude 'META-INF/LICENSE.txt'
+                    exclude 'META-INF/NOTICE.txt'
+                    exclude 'META-INF/ASL2.0'
+                    exclude 'LICENSE.txt'
+                }
+            }
+
+            tasks.withType(JavaCompile) {
+                options.compilerArgs += '-Xlint:unchecked'
+                options.compilerArgs += '-Xlint:deprecation'
+            }
+        }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

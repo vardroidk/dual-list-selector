@@ -1,0 +1,41 @@
+apply plugin: 'com.android.library'
+
+android {
+    defaultConfig {
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+        multiDexEnabled true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+android.libraryVariants.all { variant ->
+    variant.outputs.all {
+        outputFileName = rootProject.projectName + "-lib-${project.versionName}.aar"
+    }
+}
+
+dependencies { // Keep in order
+    // Project
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    // Implementation
+    implementation "androidx.appcompat:appcompat:${rootProject.versions.androidXAppcompat}"
+    implementation "androidx.constraintlayout:constraintlayout:${rootProject.versions.androidXConstraintLayout}"
+    implementation "androidx.recyclerview:recyclerview:${rootProject.versions.androidXRecyclerView}"
+    implementation "com.google.guava:guava:${rootProject.versions.googleGuava}"
+    implementation "jp.wasabeef:recyclerview-animators:${rootProject.versions.recyclerviewAnimators}"
+    // Compile only
+    compileOnly "org.projectlombok:lombok:${rootProject.versions.lombok}"
+    // Annotation processor
+    annotationProcessor "org.projectlombok:lombok:${rootProject.versions.lombok}"
+    // Test
+    androidTestImplementation "androidx.test:runner:${rootProject.versions.androidXTestRunner}"
+    testImplementation "junit:junit:${rootProject.versions.junit}"
+}

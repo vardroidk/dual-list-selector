@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SlidingDividerView">
+        <attr name="sdv_collapsed_view_width" format="dimension" />
+
+        <attr name="sd_divider_background_color" format="color" />
+        <attr name="sd_divider_handlebar_color" format="color" />
+    </declare-styleable>
+</resources>

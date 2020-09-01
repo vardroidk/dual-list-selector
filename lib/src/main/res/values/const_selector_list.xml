@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <bool name="default_show_title">false</bool>
+    <bool name="default_show_empty_list_text">false</bool>
+    <bool name="default_scroll_to_inserted_list_item">false</bool>
+    <bool name="default_show_list_item_animation">true</bool>
+    <bool name="default_show_list_item_divider">true</bool>
+
+</resources>
