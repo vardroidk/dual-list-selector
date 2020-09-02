@@ -39,7 +39,7 @@ Define a `DualListSelectorView` in xml layout (all `app:dls_*` attributes are op
   app:dls_selectable_list_title_text="Best movies"
   app:dls_selected_list_title_text="My bucket list"
   app:dls_show_empty_list_text="true"
-  app:dls_selectable_empty_list_text="No more movies to select.
+  app:dls_selectable_empty_list_text="No more movies to select..."
   app:dls_selected_empty_list_text="No movie selected yet..."
   app:dls_show_list_item_animation="true"
   app:dls_scroll_to_inserted_list_item="false"
