@@ -32,11 +32,11 @@ public class SampleSingleActivity extends AppCompatActivity {
         List<SelectorListItem> items = ConverterUtils.convertList(
                 movies,
                 movie -> SelectorListItem.builder()
-                        .id(String.valueOf(movie.getId()))                              // Mandatory
-                        .primaryText(movie.getTitle())                                  // Mandatory
-                        .secondaryText(movie.getYear() + " - " + movie.getDirector())   // Optional
-                        .imageLoader((imageView, defaultImageHolder) ->                 // Optional, default (letter) image can be used as placeholder
-                                Glide
+                        .id(String.valueOf(movie.getId()))                              // Mandatory, must be unique
+                        .primaryText(movie.getTitle())                                  // Mandatory, non-null
+                        .secondaryText(movie.getYear() + " - " + movie.getDirector())   // Optional, nullable
+                        .imageLoader((imageView, defaultImageHolder) ->                 // Optional, nullable, default (letter) image can be used as placeholder
+                                Glide                                                   // Glide is just an example, any image loading implementation can be used
                                         .with(SampleSingleActivity.this)
                                         .load(movie.getPosterImageUrl())
                                         .placeholder(defaultImageHolder.get())

@@ -47,8 +47,8 @@ public class SampleDefaultFragment extends Fragment {
         List<SelectorListItem> items = ConverterUtils.convertList(
                 movies,
                 movie -> SelectorListItem.builder()
-                        .id(String.valueOf(movie.getId()))  // Mandatory
-                        .primaryText(movie.getTitle())      // Mandatory
+                        .id(String.valueOf(movie.getId()))                              // Mandatory
+                        .primaryText(movie.getTitle())                                  // Mandatory
                         .build()
         );
 

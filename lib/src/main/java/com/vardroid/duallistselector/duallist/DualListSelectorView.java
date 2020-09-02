@@ -545,7 +545,7 @@ public class DualListSelectorView extends LinearLayout {
         slidingDividerView.setDividerHandlebarColorInt(dividerHandlebarColorInt);
     }
 
-    public void setSavedItems() {
+    private void setSavedItems() {
         ImmutableList<SelectorListAdapterItem> mergedItems = new ImmutableList.Builder<SelectorListAdapterItem>()
                 .addAll(selectableListView.getItems())
                 .addAll(selectedListView.getItems())
