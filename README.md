@@ -1,6 +1,6 @@
-Dual list selector is a highly customizable and easy to use Android input view to select multiple options from a list of items. This widget (which allows the users to move items between two lists) is well known for the [**Web platform**](https://www.jqueryscript.net/blog/best-dual-list-box.html) but when we try to apply it on Mobile it is simply unusable in it's original form. Dual list selector rethinks and redesign this concept and provides a new alternative for selector components.
+Dual list selector is a highly customizable and easy to use Android input view to select multiple options from a list of items. This widget (which allows the users to move items between two lists) is well known for the [**Web platform**](https://www.jqueryscript.net/blog/best-dual-list-box.html) but when we try to apply it on Mobile it is simply unusable in the original form. Dual list selector rethinks and redesign this concept and provides a new alternative for selector components.
 
-TODO VIDEO
+[![Thumbnail](https://github.com/vardroidk/dual-list-selector/blob/master/demo/media/dual_list_selector_demo_thumbnail.png)](https://www.youtube.com/watch?v=mONPy-i41yk)
 
 ## Table of Contents
 1. [Setup](#setup)
